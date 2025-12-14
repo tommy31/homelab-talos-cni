@@ -42,6 +42,9 @@ helm template \
   --set l2announcements.enabled=true \
   --set defaultLBServiceIPAM=lbipam \
   --set lbExternalClusterIP=true \
+  --set hubble.enabled=true \
+  --set hubble.relay.enabled=true \
+  --set hubble.ui.enabled=true \
   > "${OUTPUT_FILE}"
 
   # --set gatewayAPI.enabled=true \
