@@ -36,15 +36,16 @@ helm template \
   --set cgroup.hostRoot=/sys/fs/cgroup \
   --set k8sServiceHost=localhost \
   --set k8sServicePort=7445 \
-  --set gatewayAPI.enabled=true \
-  --set gatewayAPI.enableAlpn=true \
-  --set gatewayAPI.enableAppProtocol=true \
   --set l2announcements.enabled=true \
   --set defaultLBServiceIPAM=lbipam \
   --set lbExternalClusterIP=true \
-  --set hubble.enabled=true \
-  --set hubble.relay.enabled=true \
-  --set hubble.ui.enabled=true \
+  --set devices=eth+ \
+  --set gatewayAPI.enabled=true \
+  --set gatewayAPI.enableAlpn=true \
+  --set gatewayAPI.enableAppProtocol=true \
+  --set hubble.enabled=false \
+  --set hubble.relay.enabled=false \
+  --set hubble.ui.enabled=false \
   > "${OUTPUT_FILE}"
 
   # --set gatewayAPI.enabled=true \
